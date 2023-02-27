@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: rgb(230, 225, 225);
+    color: brown;
+}
+
+header{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1{
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: rgb(226, 58, 58);
+    margin-bottom: 1rem;
+}
+
+#todo-form{
+    display: flex;
+}
+
+input, button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#todo-input{
+    flex: 1 1 0%;
+    background-color: rgb(195, 140, 140);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color:  antiquewhite;
+    font-size: 1.25rem;
+}
+
+#todo-input::placeholder{
+    color: antiquewhite;
+}
+
+#todo-submit{
+    color: black;
+    font-size: 1.25;
+    font-weight: 700;
+    background-color: rgb(157, 86, 86);
+    color: rgb(205, 192, 192);
+    border-radius: 50%;
+    cursor: pointer;
+    /* transition: 0.4s; */
+}
+
+/* #todo-submit:hover:active{
+    opacity: 0.8;
+} */
+
+main{
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.todo-list{
+    padding: 1rem;
+}
+
+.todo-list h2{
+    font-size: 1.5rem; 
+    font-weight: 300;
+    color: rgba(214, 35, 35, 0.977);
+    margin-bottom: 1rem;
+}
+
+#todos .todo{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(252, 252, 250, 0.586);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#todos .todo .content{
+    flex: 1 1 0%;
+}
+
+#todos .todo .content .text{
+    color: rgb(133, 61, 61);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: .4s;
+}
+
+#todos .todo .content .text:not(:read-only) {
+    color: rgb(224, 161, 60) ;
+}
+
+.actions{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.edit, .delete{
+    color: brown ;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
