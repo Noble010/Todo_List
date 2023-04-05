@@ -63,5 +63,49 @@ window.addEventListener('load', () =>{
             list_el.removeChild(todo_el)
         });
 
+        function newTodo() {
+
+            function deleteTaskFromList(index) {
+              lists = lists.filter((word, i) => i != index);
+              newTodo();
+            }
+
+            const output = document.querySelector("todos");
+            output.innerHTML = "";
+            for (let index in lists) {
+              let list = list[index];
+              output.innerHTML += `<div id='delete' onclick='deleteTaskFromList(${index})' class='delete'> ${list}</div>`;
+            }
+          }
+
+
     })
 })
+
+
+// let lists = [];
+
+// const form = document.querySelector("form");
+// form.addEventListener("submit", onSubmit);
+
+// function onSubmit(e) {
+//   e.preventDefault();
+//   const input = document.querySelector("todo-input").value;
+//   lists.push(input);
+//   newTodo();
+//   document.querySelector("todo-input").value = "";
+// }
+
+// function newTodo() {
+//   const output = document.querySelector("todos");
+//   output.innerHTML = "";
+//   for (let index in lists) {
+//     let list = lists[index];
+//     output.innerHTML += `<div id='delete' onclick='deleteTaskFromList(${index})' class='delete'> ${list}</div>`;
+//   }
+// }
+
+// function deleteTaskFromList(index) {
+//   lists = lists.filter((word, i) => i != index);
+//   newTodo();
+// }
